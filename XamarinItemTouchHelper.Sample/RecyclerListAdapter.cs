@@ -49,43 +49,12 @@ namespace XamarinItemTouchHelper.Sample
             return itemViewHolder;
         }
 
-        public class TouchListener : View.IOnTouchListener
-        {
-            private ItemViewHolder itemHolder;
-
-            public TouchListener(ItemViewHolder holder)
-            {
-                itemHolder = holder;
-            }
-
-            public bool OnTouch (View v, MotionEvent e)
-            {
-                
-                if (MotionEventCompat.GetActionMasked(e) == MotionEventCompat.ActionPointerDown) {
-                    //TODO: Fix this
-                    //mDragStartListener.OnStartDrag(itemHolder);
-                }
-                return false;
-            }
-
-            public void Dispose ()
-            {
-                throw new NotImplementedException ();
-            }
-
-            public IntPtr Handle {
-                get {
-                    throw new NotImplementedException ();
-                }
-            }
-        }
-
         public override void OnBindViewHolder (RecyclerView.ViewHolder holder, int position)
         {
             var itemHolder = (ItemViewHolder)holder;
 
             itemHolder.textView.Text = mItems.ElementAt(position);
-            itemHolder.handleView.SetOnTouchListener (new TouchListener((ItemViewHolder)holder));
+            itemHolder.handleView.SetOnTouchListener (new TouchListenerHelper(itemHolder, mDragStartListener));
         }
 
         public void OnItemMove (int fromPosition, int toPosition)
@@ -129,7 +98,7 @@ namespace XamarinItemTouchHelper.Sample
 
             public void OnItemClear ()
             {
-                _itemView.SetBackgroundColor(Color.Transparent);
+                _itemView.SetBackgroundColor(Color.White);
             }
         }
     }
