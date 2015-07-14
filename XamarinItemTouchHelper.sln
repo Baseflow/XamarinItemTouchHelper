@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinItemTouchHelper", "XamarinItemTouchHelper\XamarinItemTouchHelper.csproj", "{19FB28F4-9CC2-40DA-96B5-12220D352946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinItemTouchHelper.Sample", "XamarinItemTouchHelper.Sample\XamarinItemTouchHelper.Sample.csproj", "{BBAA60D3-CC25-48E5-8247-2AB6E0A77F3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{19FB28F4-9CC2-40DA-96B5-12220D352946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19FB28F4-9CC2-40DA-96B5-12220D352946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19FB28F4-9CC2-40DA-96B5-12220D352946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAA60D3-CC25-48E5-8247-2AB6E0A77F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAA60D3-CC25-48E5-8247-2AB6E0A77F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAA60D3-CC25-48E5-8247-2AB6E0A77F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAA60D3-CC25-48E5-8247-2AB6E0A77F3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
