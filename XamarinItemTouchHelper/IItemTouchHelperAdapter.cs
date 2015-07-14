@@ -16,9 +16,8 @@ namespace XamarinItemTouchHelper
     {
         /// <summary>
         /// Called when an item has been dragged far enough to trigger a move. This is called every time
-        /// an item is shifted, and <strong>not</strong> at the end of a "drop" event.<br/>
-        /// <br/>
-        /// Implementations should call {@link RecyclerView.Adapter#notifyItemMoved(int, int)} after
+        /// an item is shifted, and not at the end of a "drop" event.
+        /// Implementations should call RecyclerView.Adapter#notifyItemMoved(int, int) after
         /// adjusting the underlying data to reflect this move.
         /// </summary>
         /// <param name="fromPosition">The start position of the moved item.</param>
@@ -28,7 +27,7 @@ namespace XamarinItemTouchHelper
         /// <summary>
         /// Called when an item has been dismissed by a swipe.<br/>
         /// <br/>
-        /// Implementations should call {@link RecyclerView.Adapter#notifyItemRemoved(int)} after
+        /// Implementations should call RecyclerView.Adapter#notifyItemRemoved(int) after
         /// adjusting the underlying data to reflect this removal.
         /// </summary>
         /// <param name="position">The position of the item dismissed.</param>

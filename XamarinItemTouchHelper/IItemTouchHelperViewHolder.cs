@@ -14,17 +14,16 @@ namespace XamarinItemTouchHelper
 {
     public interface IItemTouchHelperViewHolder
     {
-        /**
-     * Called when the {@link ItemTouchHelper} first registers an item as being moved or swiped.
-     * Implementations should update the item view to indicate it's active state.
-     */
+        /// <summary>
+        /// Called when the ItemTouchHelper first registers an item as being moved or swiped.
+        /// Implementations should update the item view to indicate it's active state.
+        /// </summary>
         void OnItemSelected();
 
-
-        /**
-     * Called when the {@link ItemTouchHelper} has completed the move or swipe, and the active item
-     * state should be cleared.
-     */
+        /// <summary>
+        /// Called when the ItemTouchHelper has completed the move or swipe, and the active item
+        /// state should be cleared.
+        /// </summary>
         void OnItemClear();
     }
 }

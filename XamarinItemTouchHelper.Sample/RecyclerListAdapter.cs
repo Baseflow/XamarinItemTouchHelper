@@ -13,16 +13,14 @@ namespace XamarinItemTouchHelper.Sample
 {
     public class RecyclerListAdapter : RecyclerView.Adapter, IItemTouchHelperAdapter
     {
-        /**
-     * Listener for manual initiation of a drag.
-     */
+        /// <summary>
+        /// Listener for manual initiation of a drag.
+        /// </summary>
         public interface IOnStartDragListener {
-
-            /**
-         * Called when a view is requesting a start of a drag.
-         *
-         * @param viewHolder The holder of the view to drag.
-         */
+            /// <summary>
+            /// Called when a view is requesting a start of a drag.
+            /// </summary>
+            /// <param name="viewHolder">The holder of the view to drag.</param>
             void OnStartDrag(RecyclerView.ViewHolder viewHolder);
         }
 
@@ -74,10 +72,10 @@ namespace XamarinItemTouchHelper.Sample
             }
         }
 
-        /**
-     * Simple example of a view holder that implements {@link ItemTouchHelperViewHolder} and has a
-     * "handle" view that initiates a drag event when touched.
-     */
+        /// <summary>
+        /// Simple example of a view holder that implements ItemTouchHelperViewHolder and has a
+        /// "handle" view that initiates a drag event when touched.
+        /// </summary>
         public class ItemViewHolder : RecyclerView.ViewHolder, IItemTouchHelperViewHolder {
 
             public TextView textView;
