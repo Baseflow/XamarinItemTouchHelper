@@ -1,7 +1,11 @@
 # XamarinItemTouchHelper
 ## A drag and swipe library for Xamarin.Android
 
-This project is an example of basic drag & drop and swipe-to-dismiss with `RecyclerView` using `ItemTouchHelper`. It corresponds with an article series found here:
+This project is an example of basic drag & drop and swipe-to-dismiss with `RecyclerView` using `ItemTouchHelper`. 
+
+![alt tag](https://raw.githubusercontent.com/martijn00/XamarinItemTouchHelper/master/Screenshots/DragDropSwipe.png)
+
+It corresponds with an article series found here:
 
 [Drag and swipe with RecyclerView](https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf)
 
