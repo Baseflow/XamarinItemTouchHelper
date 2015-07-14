@@ -60,10 +60,11 @@ namespace XamarinItemTouchHelper.Sample
 
             public bool OnTouch (View v, MotionEvent e)
             {
-                //TODO: Fix this
-                /*if (MotionEventCompat.GetActionMasked(e) == MotionEventActions.Down) {
-                    mDragStartListener.OnStartDrag(itemHolder);
-                }*/
+                
+                if (MotionEventCompat.GetActionMasked(e) == MotionEventCompat.ActionPointerDown) {
+                    //TODO: Fix this
+                    //mDragStartListener.OnStartDrag(itemHolder);
+                }
                 return false;
             }
 
@@ -84,7 +85,7 @@ namespace XamarinItemTouchHelper.Sample
             var itemHolder = (ItemViewHolder)holder;
 
             itemHolder.textView.Text = mItems.ElementAt(position);
-            itemHolder.handleView.SetOnTouchListener (new TouchListener(itemHolder));
+            itemHolder.handleView.SetOnTouchListener (new TouchListener((ItemViewHolder)holder));
         }
 
         public void OnItemMove (int fromPosition, int toPosition)
