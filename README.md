@@ -3,6 +3,8 @@
 
 This project is an example of basic drag & drop and swipe-to-dismiss with `RecyclerView` using `ItemTouchHelper`. 
 
+ItemTouchHelper is available on [Nuget](https://www.nuget.org/packages/Xam.Plugins.Android.XamarinItemTouchHelper/)
+
 ![alt tag](https://raw.githubusercontent.com/martijn00/XamarinItemTouchHelper/master/Screenshots/DragDropSwipe.png)
 
 It corresponds with an article series found here:
