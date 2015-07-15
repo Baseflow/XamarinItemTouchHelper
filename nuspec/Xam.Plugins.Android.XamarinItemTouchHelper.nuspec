@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Xam.Plugins.Android.XamarinItemTouchHelper</id>
+        <version>1.0.1</version>
+        <title>ItemTouchHelper for Xamarin.Android RecyclerView</title>
+        <authors>Martijn van Dijk</authors>
+        <owners>Martijn van Dijk</owners>
+        <licenseUrl>https://github.com/martijn00/XamarinItemTouchHelper/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/martijn00/XamarinItemTouchHelper</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>ItemTouchHelper for Xamarin RecyclerView</description>
+        <summary>ItemTouchHelper to add drag &amp; drop and swipe-to-dismiss to RecyclerView for Xamarin</summary>
+        <tags>xamarin, monodroid, C#, xamarin.android, android, recyclerview</tags>
+		<dependencies>
+			<dependency id="Xamarin.Android.Support.v4" version="22.2.0.0" />
+			<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="22.2.0.0" />
+		</dependencies>
+    </metadata>
+    <files>
+        <file src="..\XamarinItemTouchHelper\bin\Release\XamarinItemTouchHelper.dll" target="lib\MonoAndroid\XamarinItemTouchHelper.dll" />
+        <file src="..\XamarinItemTouchHelper\bin\Release\XamarinItemTouchHelper.pdb" target="lib\MonoAndroid\XamarinItemTouchHelper.pdb" />
+    </files>
+</package>
