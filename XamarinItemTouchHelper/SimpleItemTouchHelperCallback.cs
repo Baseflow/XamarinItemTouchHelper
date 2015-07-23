@@ -39,12 +39,18 @@ namespace XamarinItemTouchHelper
             }
         }
 
-        public override int GetMovementFlags (RecyclerView p0, RecyclerView.ViewHolder p1)
+        public override int GetMovementFlags (RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder)
         {
-            // Enable drag and swipe in both directions
-            int dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down;
-            int swipeFlags = ItemTouchHelper.Start | ItemTouchHelper.End;
-            return MakeMovementFlags(dragFlags, swipeFlags);
+            // Set movement flags based on the layout manager
+            if (recyclerView.GetLayoutManager() is GridLayoutManager) {
+                int dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down | ItemTouchHelper.Left | ItemTouchHelper.Right;
+                int swipeFlags = 0;
+                return MakeMovementFlags(dragFlags, swipeFlags);
+            } else {
+                int dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down;
+                int swipeFlags = ItemTouchHelper.Start | ItemTouchHelper.End;
+                return MakeMovementFlags(dragFlags, swipeFlags);
+            }
         }
 
         public override bool OnMove (RecyclerView recyclerView, RecyclerView.ViewHolder source, RecyclerView.ViewHolder target)
@@ -66,22 +72,25 @@ namespace XamarinItemTouchHelper
 
         public override void OnChildDraw (Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, bool isCurrentlyActive)
         {
-            base.OnChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
-
-            // Fade out the view as it is swiped out of the parent's bounds
             if (actionState == ItemTouchHelper.ActionStateSwipe) {
-                View itemView = viewHolder.ItemView;
-                float alpha = AlphaFull - Math.Abs(dX) / (float) itemView.Width;
-                itemView.Alpha = alpha;
+                // Fade out the view as it is swiped out of the parent's bounds
+                float alpha = AlphaFull - Math.Abs(dX) / (float) viewHolder.ItemView.Width;
+                viewHolder.ItemView.Alpha = alpha;
+                viewHolder.ItemView.TranslationX = dX;
+            } else {
+                base.OnChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
             }
         }
 
         public override void OnSelectedChanged (RecyclerView.ViewHolder viewHolder, int actionState)
         {
+            // We only want the active item to change
             if (actionState != ItemTouchHelper.ActionStateIdle) {
-                // Let the view holder know that this item is being moved or dragged
-                IItemTouchHelperViewHolder itemViewHolder = (IItemTouchHelperViewHolder) viewHolder;
-                itemViewHolder.OnItemSelected();
+                if (viewHolder is IItemTouchHelperViewHolder) {
+                    // Let the view holder know that this item is being moved or dragged
+                    IItemTouchHelperViewHolder itemViewHolder = (IItemTouchHelperViewHolder) viewHolder;
+                    itemViewHolder.OnItemSelected();
+                }
             }
 
             base.OnSelectedChanged(viewHolder, actionState);
@@ -93,9 +102,11 @@ namespace XamarinItemTouchHelper
 
             viewHolder.ItemView.Alpha = AlphaFull;
 
-            // Tell the view holder it's time to restore the idle state
-            IItemTouchHelperViewHolder itemViewHolder = (IItemTouchHelperViewHolder) viewHolder;
-            itemViewHolder.OnItemClear();
+            if (viewHolder is IItemTouchHelperViewHolder) {
+                // Tell the view holder it's time to restore the idle state
+                IItemTouchHelperViewHolder itemViewHolder = (IItemTouchHelperViewHolder) viewHolder;
+                itemViewHolder.OnItemClear();
+            }
         }
     }
 }
