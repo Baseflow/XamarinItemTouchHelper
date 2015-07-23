@@ -15,6 +15,13 @@ using Android.Graphics;
 
 namespace XamarinItemTouchHelper
 {
+    /// <summary>
+    /// An implementation of ItemTouchHelper.Callback that enables basic drag & drop and
+    /// swipe-to-dismiss. Drag events are automatically started by an item long-press.
+    /// Expects the RecyclerView.Adapter to listen for 
+    /// ItemTouchHelperAdapter callbacks and the RecyclerView.ViewHolder to implement
+    /// ItemTouchHelperViewHolder.
+    /// </summary>
     public class SimpleItemTouchHelperCallback : ItemTouchHelper.Callback
     {
 

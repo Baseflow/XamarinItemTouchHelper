@@ -12,6 +12,10 @@ using Android.Widget;
 
 namespace XamarinItemTouchHelper
 {
+    /// <summary>
+    /// Interface to notify an item ViewHolder of relevant callbacks from
+    /// android.support.v7.widget.helper.ItemTouchHelper.Callback.
+    /// </summary>
     public interface IItemTouchHelperViewHolder
     {
         /// <summary>
