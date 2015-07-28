@@ -17,7 +17,7 @@ The classes in [co.paulburke.android.itemtouchhelperdemo.helper](https://github.
 
 Developed by Paul Burke ([iPaulPro](https://github.com/iPaulPro)) - [paulburke.co](http://paulburke.co/)
 
-Made for Xamarin by ([Martijn00](https://github.com/martijn00))
+Made for Xamarin by [Martijn00](https://github.com/martijn00)
 
 ## License
 
