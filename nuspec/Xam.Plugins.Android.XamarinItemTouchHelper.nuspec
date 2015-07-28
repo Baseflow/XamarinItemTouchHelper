@@ -13,8 +13,8 @@
         <summary>ItemTouchHelper to add drag &amp; drop and swipe-to-dismiss to RecyclerView for Xamarin</summary>
         <tags>xamarin, monodroid, C#, xamarin.android, android, recyclerview</tags>
 		<dependencies>
-			<dependency id="Xamarin.Android.Support.v4" version="22.2.1.0-beta1" />
-			<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="22.2.1.0-beta1" />
+			<dependency id="Xamarin.Android.Support.v4" version="22.2.1.0" />
+			<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="22.2.1.0" />
 		</dependencies>
     </metadata>
     <files>
