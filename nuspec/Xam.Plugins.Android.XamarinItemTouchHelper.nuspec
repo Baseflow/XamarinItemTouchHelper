@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Xam.Plugins.Android.XamarinItemTouchHelper</id>
-        <version>1.1.1</version>
+        <version>1.1.2</version>
         <title>ItemTouchHelper for Xamarin.Android RecyclerView</title>
         <authors>Martijn van Dijk</authors>
         <owners>Martijn van Dijk</owners>
