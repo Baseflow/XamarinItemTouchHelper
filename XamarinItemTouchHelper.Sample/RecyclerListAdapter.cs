@@ -76,8 +76,8 @@ namespace XamarinItemTouchHelper.Sample
             public ItemViewHolder (View itemView) : base (itemView)
             {
                 _itemView = itemView;
-                textView = (TextView) itemView.FindViewById(Resource.Id.text);
-                handleView = (ImageView) itemView.FindViewById(Resource.Id.handle);
+                textView = itemView.FindViewById<TextView>(Resource.Id.text);
+                handleView = itemView.FindViewById<ImageView>(Resource.Id.handle);
             }
 
             public void OnItemSelected ()
