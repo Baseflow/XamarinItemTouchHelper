@@ -13,17 +13,6 @@ namespace XamarinItemTouchHelper.Sample
 {
     public class RecyclerListAdapter : RecyclerView.Adapter, IItemTouchHelperAdapter
     {
-        /// <summary>
-        /// Listener for manual initiation of a drag.
-        /// </summary>
-        public interface IOnStartDragListener {
-            /// <summary>
-            /// Called when a view is requesting a start of a drag.
-            /// </summary>
-            /// <param name="viewHolder">The holder of the view to drag.</param>
-            void OnStartDrag(RecyclerView.ViewHolder viewHolder);
-        }
-
         private static string[] STRINGS = new String[]{
             "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"
         };
@@ -53,17 +42,43 @@ namespace XamarinItemTouchHelper.Sample
 
             itemHolder.textView.Text = mItems.ElementAt(position);
             itemHolder.handleView.SetOnTouchListener (new TouchListenerHelper(itemHolder, mDragStartListener));
+
+            /*itemHolder.handleView.Touch += (object sender, View.TouchEventArgs e) => {
+                if (MotionEventCompat.GetActionMasked(e) == MotionEventActions.Down) {
+                    mDragStartListener.OnStartDrag(holder);
+                }
+            };*/
+
+
+            // Start a drag whenever the handle view it touched
+            /*holder.handleView.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (MotionEventCompat.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
+                        mDragStartListener.onStartDrag(holder);
+                    }
+                    return false;
+                }
+            });*/
+
+
+           /* var itemHolder = (ItemViewHolder)holder;
+
+            itemHolder.textView.Text = mItems.ElementAt(position);
+            itemHolder.handleView.SetOnTouchListener (new TouchListenerHelper(itemHolder, mDragStartListener));*/
         }
 
-        public void OnItemMove (int fromPosition, int toPosition)
-        {
-            mItems.Move(fromPosition, toPosition);
-            NotifyItemMoved(fromPosition, toPosition);
-        }
         public void OnItemDismiss (int position)
         {
             mItems.Remove(mItems.ElementAt(position));
             NotifyItemRemoved(position);
+        }
+
+        public bool OnItemMove (int fromPosition, int toPosition)
+        {
+            mItems.Move(fromPosition, toPosition);
+            NotifyItemMoved(fromPosition, toPosition);
+            return true;
         }
 
         public override int ItemCount {
@@ -85,8 +100,8 @@ namespace XamarinItemTouchHelper.Sample
             public ItemViewHolder (View itemView) : base (itemView)
             {
                 _itemView = itemView;
-                textView = (TextView) itemView.FindViewById(Resource.Id.textView1);
-                handleView = (ImageView) itemView.FindViewById(Resource.Id.imageView1);
+                textView = (TextView) itemView.FindViewById(Resource.Id.text);
+                handleView = (ImageView) itemView.FindViewById(Resource.Id.handle);
             }
 
             public void OnItemSelected ()

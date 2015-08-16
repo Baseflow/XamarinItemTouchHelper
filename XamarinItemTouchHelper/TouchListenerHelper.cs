@@ -1,15 +1,16 @@
 ﻿using System;
 using Android.Views;
 using Android.Support.V4.View;
+using Android.Support.V7.Widget;
 
 namespace XamarinItemTouchHelper.Sample
 {
     public class TouchListenerHelper : Java.Lang.Object, View.IOnTouchListener
     {
-        private RecyclerListAdapter.ItemViewHolder _itemHolder;
-        private RecyclerListAdapter.IOnStartDragListener _mDragStartListener;
+        private RecyclerView.ViewHolder _itemHolder;
+        private IOnStartDragListener _mDragStartListener;
 
-        public TouchListenerHelper(RecyclerListAdapter.ItemViewHolder holder, RecyclerListAdapter.IOnStartDragListener mDragStartListener)
+        public TouchListenerHelper(RecyclerView.ViewHolder holder, IOnStartDragListener mDragStartListener)
         {
             _itemHolder = holder;
             _mDragStartListener = mDragStartListener;
@@ -17,8 +18,7 @@ namespace XamarinItemTouchHelper.Sample
 
         public bool OnTouch (View v, MotionEvent e)
         {
-
-            if (MotionEventCompat.GetActionMasked(e) == MotionEventCompat.ActionPointerDown) {
+            if (e.Action == MotionEventActions.Down) {
                 _mDragStartListener.OnStartDrag(_itemHolder);
             }
             return false;

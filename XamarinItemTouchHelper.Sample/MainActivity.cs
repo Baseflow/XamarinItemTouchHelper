@@ -12,7 +12,7 @@ using Android.Support.V7.Widget;
 namespace XamarinItemTouchHelper.Sample
 {
     [Activity (Label = "XamarinItemTouchHelper.Sample", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, RecyclerListAdapter.IOnStartDragListener
+    public class MainActivity : Activity, IOnStartDragListener
     {
         private ItemTouchHelper mItemTouchHelper;
 
