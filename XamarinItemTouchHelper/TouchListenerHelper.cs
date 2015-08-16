@@ -3,7 +3,7 @@ using Android.Views;
 using Android.Support.V4.View;
 using Android.Support.V7.Widget;
 
-namespace XamarinItemTouchHelper.Sample
+namespace XamarinItemTouchHelper
 {
     public class TouchListenerHelper : Java.Lang.Object, View.IOnTouchListener
     {
