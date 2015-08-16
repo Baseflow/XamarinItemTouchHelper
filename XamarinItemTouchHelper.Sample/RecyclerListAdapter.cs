@@ -42,30 +42,6 @@ namespace XamarinItemTouchHelper.Sample
 
             itemHolder.textView.Text = mItems.ElementAt(position);
             itemHolder.handleView.SetOnTouchListener (new TouchListenerHelper(itemHolder, mDragStartListener));
-
-            /*itemHolder.handleView.Touch += (object sender, View.TouchEventArgs e) => {
-                if (MotionEventCompat.GetActionMasked(e) == MotionEventActions.Down) {
-                    mDragStartListener.OnStartDrag(holder);
-                }
-            };*/
-
-
-            // Start a drag whenever the handle view it touched
-            /*holder.handleView.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (MotionEventCompat.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
-                        mDragStartListener.onStartDrag(holder);
-                    }
-                    return false;
-                }
-            });*/
-
-
-           /* var itemHolder = (ItemViewHolder)holder;
-
-            itemHolder.textView.Text = mItems.ElementAt(position);
-            itemHolder.handleView.SetOnTouchListener (new TouchListenerHelper(itemHolder, mDragStartListener));*/
         }
 
         public void OnItemDismiss (int position)
