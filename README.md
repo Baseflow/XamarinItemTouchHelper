@@ -13,11 +13,9 @@ It corresponds with an article series found here:
 
 The classes in [co.paulburke.android.itemtouchhelperdemo.helper](https://github.com/iPaulPro/Android-ItemTouchHelper-Demo/tree/master/app/src/main/java/co/paulburke/android/itemtouchhelperdemo/helper) can easily be used in other projects.
 
-## Credits
+## Acknowledgements
 
 Developed by Paul Burke ([iPaulPro](https://github.com/iPaulPro)) - [paulburke.co](http://paulburke.co/)
-
-Made for Xamarin by [Martijn00](https://github.com/martijn00)
 
 ## License
 
