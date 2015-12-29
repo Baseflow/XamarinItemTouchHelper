@@ -26,20 +26,6 @@ namespace XamarinItemTouchHelper.Sample
 		
 		public static void UpdateIdValues()
 		{
-			global::XamarinItemTouchHelper.Resource.Attribute.layoutManager = global::XamarinItemTouchHelper.Sample.Resource.Attribute.layoutManager;
-			global::XamarinItemTouchHelper.Resource.Attribute.reverseLayout = global::XamarinItemTouchHelper.Sample.Resource.Attribute.reverseLayout;
-			global::XamarinItemTouchHelper.Resource.Attribute.spanCount = global::XamarinItemTouchHelper.Sample.Resource.Attribute.spanCount;
-			global::XamarinItemTouchHelper.Resource.Attribute.stackFromEnd = global::XamarinItemTouchHelper.Sample.Resource.Attribute.stackFromEnd;
-			global::XamarinItemTouchHelper.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::XamarinItemTouchHelper.Sample.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::XamarinItemTouchHelper.Resource.Id.item_touch_helper_previous_elevation = global::XamarinItemTouchHelper.Sample.Resource.Id.item_touch_helper_previous_elevation;
-			global::XamarinItemTouchHelper.Resource.String.ApplicationName = global::XamarinItemTouchHelper.Sample.Resource.String.ApplicationName;
-			global::XamarinItemTouchHelper.Resource.String.Hello = global::XamarinItemTouchHelper.Sample.Resource.String.Hello;
-			global::XamarinItemTouchHelper.Resource.Styleable.RecyclerView = global::XamarinItemTouchHelper.Sample.Resource.Styleable.RecyclerView;
-			global::XamarinItemTouchHelper.Resource.Styleable.RecyclerView_android_orientation = global::XamarinItemTouchHelper.Sample.Resource.Styleable.RecyclerView_android_orientation;
-			global::XamarinItemTouchHelper.Resource.Styleable.RecyclerView_layoutManager = global::XamarinItemTouchHelper.Sample.Resource.Styleable.RecyclerView_layoutManager;
-			global::XamarinItemTouchHelper.Resource.Styleable.RecyclerView_reverseLayout = global::XamarinItemTouchHelper.Sample.Resource.Styleable.RecyclerView_reverseLayout;
-			global::XamarinItemTouchHelper.Resource.Styleable.RecyclerView_spanCount = global::XamarinItemTouchHelper.Sample.Resource.Styleable.RecyclerView_spanCount;
-			global::XamarinItemTouchHelper.Resource.Styleable.RecyclerView_stackFromEnd = global::XamarinItemTouchHelper.Sample.Resource.Styleable.RecyclerView_stackFromEnd;
 		}
 		
 		public partial class Animation
@@ -1830,12 +1816,6 @@ namespace XamarinItemTouchHelper.Sample
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070013
-			public const int ApplicationName = 2131165203;
-			
-			// aapt resource value: 0x7f070012
-			public const int Hello = 2131165202;
-			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
 			
@@ -1887,11 +1867,11 @@ namespace XamarinItemTouchHelper.Sample
 			// aapt resource value: 0x7f070010
 			public const int abc_toolbar_collapse_description = 2131165200;
 			
-			// aapt resource value: 0x7f070015
-			public const int app_name = 2131165205;
+			// aapt resource value: 0x7f070013
+			public const int app_name = 2131165203;
 			
-			// aapt resource value: 0x7f070014
-			public const int hello = 2131165204;
+			// aapt resource value: 0x7f070012
+			public const int hello = 2131165202;
 			
 			// aapt resource value: 0x7f070011
 			public const int status_bar_notification_info_overflow = 2131165201;
