@@ -24,6 +24,9 @@ namespace XamarinItemTouchHelper
     /// </summary>
     public class SimpleItemTouchHelperCallback : ItemTouchHelper.Callback
     {
+		private bool dragEnabled = true;
+
+		private bool swipeEnabled = true;
 
         public static float AlphaFull = 1.0f;
 
@@ -36,15 +39,25 @@ namespace XamarinItemTouchHelper
 
         public override bool IsLongPressDragEnabled {
             get {
-                return true;
+				return dragEnabled;
             }
         }
 
+		public void SetLongPressDragEnabled(bool longPressDragEnabled)
+		{
+			dragEnabled = longPressDragEnabled;
+		}
+
         public override bool IsItemViewSwipeEnabled {
             get {
-                return true;
+				return swipeEnabled;
             }
         }
+
+		public void SetItemViewSwipeEnabled(bool itemViewSwipeEnabled)
+		{
+			swipeEnabled = itemViewSwipeEnabled;
+		}
 
         public override int GetMovementFlags (RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder)
         {
@@ -67,8 +80,7 @@ namespace XamarinItemTouchHelper
             }
 
             // Notify the adapter of the move
-            mAdapter.OnItemMove(source.AdapterPosition, target.AdapterPosition);
-            return true;
+            return mAdapter.OnItemMove(source.AdapterPosition, target.AdapterPosition);
         }
 
         public override void OnSwiped (Android.Support.V7.Widget.RecyclerView.ViewHolder viewHolder, int i)
