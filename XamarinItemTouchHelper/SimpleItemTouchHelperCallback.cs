@@ -59,18 +59,27 @@ namespace XamarinItemTouchHelper
 			swipeEnabled = itemViewSwipeEnabled;
 		}
 
-        public override int GetMovementFlags (RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder)
+        public override int GetMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder)
         {
+            int dragFlags = 0;
+            int swipeFlags = 0;
             // Set movement flags based on the layout manager
-            if (recyclerView.GetLayoutManager() is GridLayoutManager) {
-                int dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down | ItemTouchHelper.Left | ItemTouchHelper.Right;
-                int swipeFlags = 0;
-                return MakeMovementFlags(dragFlags, swipeFlags);
-            } else {
-                int dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down;
-                int swipeFlags = ItemTouchHelper.Start | ItemTouchHelper.End;
-                return MakeMovementFlags(dragFlags, swipeFlags);
+            if (recyclerView.GetLayoutManager() is GridLayoutManager)
+            {
+                dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down | ItemTouchHelper.Left | ItemTouchHelper.Right;
             }
+            else {
+                if (swipeEnabled)
+                {
+                    swipeFlags = ItemTouchHelper.Left | ItemTouchHelper.Right;
+                }
+                else
+                {
+                    dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down;
+                    swipeFlags = ItemTouchHelper.Start | ItemTouchHelper.End;
+                }
+            }
+            return MakeMovementFlags(dragFlags, swipeFlags);
         }
 
         public override bool OnMove (RecyclerView recyclerView, RecyclerView.ViewHolder source, RecyclerView.ViewHolder target)
