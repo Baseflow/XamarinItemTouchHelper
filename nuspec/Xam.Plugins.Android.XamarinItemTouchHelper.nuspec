@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>Xam.Plugins.Android.XamarinItemTouchHelper</id>
-		<version>1.1.3</version>
+		<version>1.1.4</version>
 		<title>ItemTouchHelper for Xamarin.Android RecyclerView</title>
 		<authors>Martijn van Dijk</authors>
 		<owners>Martijn van Dijk</owners>
@@ -14,12 +14,12 @@
 		<tags>xamarin, monodroid, C#, xamarin.android, android, recyclerview, itemtouchhelper, swipe, drag</tags>
 		<dependencies>
 			<group targetFramework ="MonoAndroid">
-				<dependency id="Xamarin.Android.Support.v4" version="23.1.1.0" />
-				<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.1.1.0" />
+				<dependency id="Xamarin.Android.Support.v4" version="23.2.1" />
+				<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.2.1" />
 			</group>
 			<group targetFramework ="dotnet">
-				<dependency id="Xamarin.Android.Support.v4" version="23.1.1.0" />
-				<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.1.1.0" />
+				<dependency id="Xamarin.Android.Support.v4" version="23.2.1" />
+				<dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.2.1" />
 			</group>
 		</dependencies>
 	</metadata>
