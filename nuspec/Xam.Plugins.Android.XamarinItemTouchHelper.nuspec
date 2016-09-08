@@ -8,12 +8,13 @@
         <owners>Martijn van Dijk</owners>
         <licenseUrl>https://github.com/martijn00/XamarinItemTouchHelper/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/martijn00/XamarinItemTouchHelper</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/martijn00/XamarinItemTouchHelper/master/icon_touchhelper.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>ItemTouchHelper for Xamarin RecyclerView</description>
         <summary>ItemTouchHelper to add drag &amp; drop and swipe-to-dismiss to RecyclerView for Xamarin</summary>
         <tags>xamarin, monodroid, C#, xamarin.android, android, recyclerview, itemtouchhelper, swipe, drag</tags>
         <dependencies>
-            <group targetFramework="MonoAndroid">
+            <group targetFramework="MonoAndroid0.0">
                 <dependency id="Xamarin.Android.Support.v4" version="23.4.0.1" />
                 <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.4.0.1" />
             </group>
